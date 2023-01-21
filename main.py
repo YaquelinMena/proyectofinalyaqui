@@ -40,14 +40,18 @@ def main():
     ret, thresh28 = cv.threshold(thresh27, 127, 255, cv.THRESH_TRUNC)
     ret, thresh29 = cv.threshold(thresh28, 127, 255, cv.THRESH_TRUNC)
     ret, thresh30 = cv.threshold(thresh29, 127, 255, cv.THRESH_TRUNC)
-
+    ret, thresh31 = cv.threshold(thresh30, 127, 255, cv.THRESH_TRUNC)
+    ret, thresh32 = cv.threshold(thresh31, 127, 255, cv.THRESH_TRUNC)
+    ret, thresh33 = cv.threshold(thresh32, 127, 255, cv.THRESH_TRUNC)
+    ret, thresh34 = cv.threshold(thresh33, 127, 255, cv.THRESH_TRUNC)
+    ret, thresh35 = cv.threshold(thresh34, 127, 255, cv.THRESH_TRUNC)
 
     titles = ['Original Image','Figura 1']
-    images = [img, thresh30]
+    images = [img, thresh35]
     for i in range(2):
         plt.subplot(1,2,i+1),plt.imshow(images[i],'gray',vmin=0,vmax=255)
         plt.title(titles[i])
         plt.xticks([]),plt.yticks([])
     plt.show()
 
-    return thresh30
+    return thresh35
